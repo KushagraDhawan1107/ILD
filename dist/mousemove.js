@@ -39,6 +39,7 @@ function render() {
 	if (!is_click_area_active) {
 		cursor_change(direction());
 	}
+	requestAnimationFrame(render);
 }
 
 var cursor_change = (value) => {
@@ -91,7 +92,7 @@ mouse_areas_right.addEventListener("mouseenter", () => {
 	cursor_change("right");
 });
 
-setInterval(render, 1000 / 60);
+requestAnimationFrame(render);
 
 /* x: lerp(0.1, convert_range(project_titles[0].getBoundingClientRect().x), convert_range(normal_mouse_pos_x)), */
 
