@@ -6,6 +6,8 @@ var normal_mouse_pos_x = current_mouse_pos_x - offset_distance;
 var project_titles = document.querySelectorAll(".movable-gallery-project-title");
 var movable_gallery_item = document.querySelectorAll(".movable-gallery-item");
 var movable_gallery_item_image = document.querySelectorAll(".movable-gallery-image");
+var movable_gallery_project_detail = document.querySelectorAll(".movable-gallery-project-detail");
+var movable_gallery_number = document.querySelectorAll(".movable-gallery-number");
 var is_click_area_active = false;
 var cursor = document.querySelector(".cursor");
 var mouse_areas_left = document.querySelector(".mouseareas-left");
@@ -79,24 +81,46 @@ movable_gallery_item_image.forEach((e) => {
 document.addEventListener("click", () => {
 	if (current_cursor_value === "right" && number_of_clicks < movable_gallery_item.length - 2 && animation_flag === true) {
 		animation_flag = false;
-		gsap.to(movable_gallery_item, 2, {
-			onComplete: () => {
-				animation_flag = true;
-			},
-			x: "-=" + (movable_gallery_item[0].getBoundingClientRect().width + 80),
-			ease: "power4.inOut",
-		});
+		var gallery_item_move_timeline = new gsap.timeline();
+		gallery_item_move_timeline
+			.to(movable_gallery_item, 2, { x: "-=" + (movable_gallery_item[0].getBoundingClientRect().width + 80), ease: "power4.inOut" })
+			.to(movable_gallery_item_image, 1, { scaleX: 1.1, ease: "power4.in" }, 0)
+			.to(
+				movable_gallery_item_image,
+				1,
+				{
+					scaleX: 1,
+					ease: "power4.out",
+					onComplete: () => {
+						animation_flag = true;
+					},
+				},
+				1
+			);
+
 		number_of_clicks++;
 	} else if (current_cursor_value === "left" && number_of_clicks > 0 && animation_flag === true) {
 		animation_flag = false;
 		console.log(movable_gallery_item[0].getBoundingClientRect().width + 80);
-		gsap.to(movable_gallery_item, 2, {
-			onComplete: () => {
-				animation_flag = true;
-			},
-			x: "+=" + (movable_gallery_item[0].getBoundingClientRect().width + 80),
-			ease: "power4.inOut",
-		});
+		var gallery_item_move_timeline = new gsap.timeline();
+		gallery_item_move_timeline
+			.to(movable_gallery_item, 2, {
+				x: "+=" + (movable_gallery_item[0].getBoundingClientRect().width + 80),
+				ease: "power4.inOut",
+			})
+			.to(movable_gallery_item_image, 1, { scaleX: 1.1, ease: "power4.in" }, 0)
+			.to(
+				movable_gallery_item_image,
+				1,
+				{
+					scaleX: 1,
+					ease: "power4.out",
+					onComplete: () => {
+						animation_flag = true;
+					},
+				},
+				1
+			);
 		number_of_clicks--;
 	}
 });
