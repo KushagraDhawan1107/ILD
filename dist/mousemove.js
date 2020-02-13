@@ -70,13 +70,13 @@ movable_gallery_item_image.forEach((e) => {
 		cursor_change("click");
 		is_click_area_active = true;
 		gsap.to(e, 1, { css: { transform: "scale(1.05)" }, ease: "power4.out" });
-		gsap.to(e.childNodes[1] , 1 , {scale : 1.25 , ease: "power4.out"});
+		gsap.to(e.childNodes[1], 1, { scale: 1.25, ease: "power4.out" });
 	});
 	e.addEventListener("mouseleave", () => {
 		cursor_change(direction());
 		is_click_area_active = false;
 		gsap.to(e, 1, { css: { transform: "scale(1)" }, ease: "power4.out" });
-		gsap.to(e.childNodes[1] , 1 , {scale : 1 , ease: "power4.out"});
+		gsap.to(e.childNodes[1], 1, { scale: 1, ease: "power4.out" });
 	});
 });
 
