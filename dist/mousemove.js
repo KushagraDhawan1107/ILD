@@ -67,28 +67,36 @@ movable_gallery_item_image.forEach((e) => {
 	e.addEventListener("mouseenter", () => {
 		cursor_change("click");
 		is_click_area_active = true;
-		gsap.to(e, 1, {css: {"transform" : "scale(1.1)"}, ease: "power4.inOut"});
+		gsap.to(e, 1, { css: { transform: "scale(1.05)" }, ease: "power4.inOut" });
 	});
 	e.addEventListener("mouseleave", () => {
 		cursor_change(direction());
 		is_click_area_active = false;
-		gsap.to(e, 1, {css: {"transform" : "scale(1)"}, ease: "power4.inOut"});
+		gsap.to(e, 1, { css: { transform: "scale(1)" }, ease: "power4.inOut" });
 	});
 });
 
 document.addEventListener("click", () => {
 	if (current_cursor_value === "right" && number_of_clicks < movable_gallery_item.length - 2 && animation_flag === true) {
 		animation_flag = false;
-		gsap.to(movable_gallery_item, 2, { onComplete: () => {
-			animation_flag = true;
-		}, x: "-=" + (movable_gallery_item[0].getBoundingClientRect().width + 80), ease: "power4.inOut" });
+		gsap.to(movable_gallery_item, 2, {
+			onComplete: () => {
+				animation_flag = true;
+			},
+			x: "-=" + (movable_gallery_item[0].getBoundingClientRect().width + 80),
+			ease: "power4.inOut",
+		});
 		number_of_clicks++;
 	} else if (current_cursor_value === "left" && number_of_clicks > 0 && animation_flag === true) {
 		animation_flag = false;
 		console.log(movable_gallery_item[0].getBoundingClientRect().width + 80);
-		gsap.to(movable_gallery_item, 2, { onComplete: () => {
-			animation_flag = true;
-		}, x: "+=" + (movable_gallery_item[0].getBoundingClientRect().width + 80), ease: "power4.inOut" });
+		gsap.to(movable_gallery_item, 2, {
+			onComplete: () => {
+				animation_flag = true;
+			},
+			x: "+=" + (movable_gallery_item[0].getBoundingClientRect().width + 80),
+			ease: "power4.inOut",
+		});
 		number_of_clicks--;
 	}
 });
