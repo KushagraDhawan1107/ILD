@@ -12,6 +12,7 @@ var mouse_areas_left = document.querySelector(".mouseareas-left");
 var mouse_areas_right = document.querySelector(".mouseareas-right");
 var number_of_clicks = 0;
 var current_cursor_value;
+var animation_flag = true;
 
 document.addEventListener("mousemove", (e) => {
 	current_mouse_pos_x = e.clientX;
@@ -74,12 +75,18 @@ movable_gallery_item_image.forEach((e) => {
 });
 
 document.addEventListener("click", () => {
-	if (current_cursor_value === "right" && number_of_clicks < movable_gallery_item.length - 2) {
-		gsap.to(movable_gallery_item, 2, { onComplete: () => {}, x: "-=" + (movable_gallery_item[0].getBoundingClientRect().width + 80), ease: "power4.inOut" });
+	if (current_cursor_value === "right" && number_of_clicks < movable_gallery_item.length - 2 && animation_flag === true) {
+		animation_flag = false;
+		gsap.to(movable_gallery_item, 2, { onComplete: () => {
+			animation_flag = true;
+		}, x: "-=" + (movable_gallery_item[0].getBoundingClientRect().width + 80), ease: "power4.inOut" });
 		number_of_clicks++;
-	} else if (current_cursor_value === "left" && number_of_clicks > 0) {
+	} else if (current_cursor_value === "left" && number_of_clicks > 0 && animation_flag === true) {
+		animation_flag = false;
 		console.log(movable_gallery_item[0].getBoundingClientRect().width + 80);
-		gsap.to(movable_gallery_item, 2, { x: "+=" + (movable_gallery_item[0].getBoundingClientRect().width + 80), ease: "power4.inOut" });
+		gsap.to(movable_gallery_item, 2, { onComplete: () => {
+			animation_flag = true;
+		}, x: "+=" + (movable_gallery_item[0].getBoundingClientRect().width + 80), ease: "power4.inOut" });
 		number_of_clicks--;
 	}
 });
