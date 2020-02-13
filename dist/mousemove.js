@@ -67,10 +67,17 @@ movable_gallery_item_image.forEach((e) => {
 	e.addEventListener("mouseenter", () => {
 		cursor_change("click");
 		is_click_area_active = true;
+		var active_width = e.getBoundingClientRect().width;
+		var active_height = e.getBoundingClientRect().height;
+		console.log(active_width + 25.6);
+		gsap.to(e, 1, {css: {"transform" : "scale(1.1)"}, ease: "power4.inOut"});
 	});
 	e.addEventListener("mouseleave", () => {
 		cursor_change(direction());
 		is_click_area_active = false;
+		var active_width = e.getBoundingClientRect().width;
+		var active_height = e.getBoundingClientRect().height;
+		gsap.to(e, 1, {css: {"transform" : "scale(1)"}, ease: "power4.inOut"});
 	});
 });
 
