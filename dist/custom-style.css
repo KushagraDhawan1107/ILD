@@ -1,0 +1,56 @@
+@font-face {
+	font-family: "SMLI";
+	src: url("assets/SMLi.ttf");
+}
+@font-face {
+	font-family: "NHU-Regular";
+	src: url("assets/NeueHaasUnicaPro-Regular.ttf");
+}
+body,
+html {
+	font-family: "NHU-Regular";
+}
+
+.cursor {
+	mix-blend-mode: difference;
+}
+
+.movable-gallery-container {
+	display: grid;
+	grid-auto-flow: column;
+	column-gap: 80px;
+}
+
+.movable-gallery-item {
+	width: 608px;
+}
+
+.movable-gallery-image-container {
+	width: 608px;
+	height: 592px;
+	display: grid;
+}
+
+.movable-gallery-image {
+	width: 512px;
+	height: 592px;
+}
+
+.movable-gallery-project-title {
+	height: 592px;
+	display: grid;
+	align-items: center;
+	font-family: "SMLI";
+}
+
+.movable-gallery-project-detail {
+	display: grid;
+	grid-template-columns: 96px 1fr;
+	align-items: center;
+	column-gap: 32px;
+}
+
+.mouseareas {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
