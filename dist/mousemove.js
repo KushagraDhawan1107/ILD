@@ -97,7 +97,6 @@ document.addEventListener("click", () => {
 				},
 				1
 			);
-
 		number_of_clicks++;
 	} else if (current_cursor_value === "left" && number_of_clicks > 0 && animation_flag === true) {
 		animation_flag = false;
