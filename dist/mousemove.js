@@ -1,5 +1,7 @@
 var current_mouse_pos_x = 0;
 var current_mouse_pos_y = 0;
+var current_touch_pos_x = 0;
+var current_touch_pos_y = 0;
 var max_distance = 50;
 var offset_distance = window.innerWidth / 2;
 var normal_mouse_pos_x = current_mouse_pos_x - offset_distance;
@@ -19,6 +21,11 @@ var animation_flag = true;
 document.addEventListener("mousemove", (e) => {
 	current_mouse_pos_x = e.clientX;
 	current_mouse_pos_y = e.clientY;
+});
+
+document.addEventListener("touchmove", (e) => {
+	current_touch_pos_x = e.touches[0].clientX;
+	current_touch_pos_y = e.touches[0].clientY;
 });
 
 var convert_range = (current_position) => {
@@ -140,3 +147,5 @@ requestAnimationFrame(render);
 var lerp = (amount, start, end) => {
 	return (1 - amount) * start + amount * end;
 };
+
+/** touch scripts */
