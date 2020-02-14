@@ -102,7 +102,6 @@ document.addEventListener("click", () => {
 		number_of_clicks++;
 	} else if (current_cursor_value === "left" && number_of_clicks > 0 && animation_flag === true) {
 		animation_flag = false;
-		console.log(movable_gallery_item[0].getBoundingClientRect().width + 80);
 		var gallery_item_move_timeline = new gsap.timeline();
 		gallery_item_move_timeline
 			.to(movable_gallery_item, 2, {
