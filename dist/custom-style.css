@@ -140,7 +140,7 @@ html {
   }
   .movable-gallery-item {
     width: 288px;
-    height: 435px;
+    height: 450px;
   }
   .movable-gallery-image-container {
     width: 288px;
@@ -160,7 +160,7 @@ html {
   }
   .movable-gallery-project-title {
     height: 370px;
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
   .movable-gallery-project-detail {
     grid-template-columns: 46px 1fr;
