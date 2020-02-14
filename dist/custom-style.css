@@ -140,12 +140,13 @@ html {
   }
   .movable-gallery-item {
     width: 288px;
-    height: 450px;
+    height: 440px;
   }
   .movable-gallery-image-container {
     width: 288px;
     height: 370px;
-    display: grid;
+	display: grid;
+	margin-top: 0em;
   }
   .movable-gallery-container {
     column-gap: 20px;
