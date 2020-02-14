@@ -136,7 +136,8 @@ html {
     padding-bottom: 2rem !important;
   }
   .movable-gallery-container {
-    margin-left: 1rem !important;
+	margin-left: 1rem !important;
+	column-gap: 20px;
   }
   .movable-gallery-item {
     width: 288px;
@@ -147,9 +148,6 @@ html {
     height: 370px;
 	display: grid;
 	margin-top: 0em;
-  }
-  .movable-gallery-container {
-    column-gap: 20px;
   }
   .movable-gallery-image {
     width: 256px;
@@ -198,7 +196,8 @@ html {
     padding-bottom: 2rem !important;
   }
   .movable-gallery-container {
-    margin-left: 2rem !important;
+	margin-left: 1rem !important;
+	column-gap: 20px;
   }
   .movable-gallery-item {
     width: 288px;
@@ -208,9 +207,6 @@ html {
     width: 288px;
     height: 450px;
     display: grid;
-  }
-  .movable-gallery-container {
-    column-gap: 20px;
   }
   .movable-gallery-image {
     width: 256px;
