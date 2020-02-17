@@ -136,8 +136,8 @@ html {
     padding-bottom: 2rem !important;
   }
   .movable-gallery-container {
-	margin-left: 1rem !important;
-	column-gap: 20px;
+    margin-left: 1rem !important;
+    column-gap: 20px;
   }
   .movable-gallery-item {
     width: 288px;
@@ -146,8 +146,8 @@ html {
   .movable-gallery-image-container {
     width: 288px;
     height: 370px;
-	display: grid;
-	margin-top: 0em;
+    display: grid;
+    margin-top: 0em;
   }
   .movable-gallery-image {
     width: 256px;
@@ -196,8 +196,8 @@ html {
     padding-bottom: 2rem !important;
   }
   .movable-gallery-container {
-	margin-left: 1rem !important;
-	column-gap: 20px;
+    margin-left: 1rem !important;
+    column-gap: 20px;
   }
   .movable-gallery-item {
     width: 288px;
