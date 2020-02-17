@@ -73,6 +73,47 @@ html {
 }
 @media (max-width: 414px) {
   /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+  .gallery-container {
+    padding-left: 0px !important;
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+  .movable-gallery-container {
+    margin-left: 1rem !important;
+    column-gap: 20px;
+  }
+  .movable-gallery-item {
+    width: 318px;
+    height: 582px;
+  }
+  .movable-gallery-image-container {
+    width: 318px;
+    height: 496px;
+    display: grid;
+  }
+  .movable-gallery-image {
+    width: 285px;
+    height: 496px;
+    margin-left: 2rem !important;
+  }
+  .movable-gallery-number {
+    font-size: 2.2rem !important;
+  }
+  .movable-gallery-project-title {
+    height: 496px;
+    font-size: 3.2rem;
+  }
+  .movable-gallery-project-detail {
+    grid-template-columns: 46px 1fr;
+    margin-top: 0.5rem;
+  }
+  .movable-gallery-project-detail p {
+    font-size: 12px;
+  }
+  .mouseareas,
+  .cursor {
+    display: none;
+  }
 }
 @media (max-width: 375px) {
   .gallery-container {
