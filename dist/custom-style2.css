@@ -1,15 +1,32 @@
 @font-face {
-    font-family: "SMLI";
-    src: url("assets/SMLi.ttf");
-  }
-  @font-face {
-    font-family: "NHU-Regular";
-    src: url("assets/NeueHaasUnicaPro-Regular.ttf");
-  }
-html ,body{
-    font-family: "NHU-Regular";
+  font-family: "SMLI";
+  src: url("assets/SMLi.ttf");
 }
-.title-heading-main{
-    font-size: 18rem;
-    font-family: "SMLI";
+@font-face {
+  font-family: "NHU-Regular";
+  src: url("assets/NeueHaasUnicaPro-Regular.ttf");
+}
+html,
+body {
+  font-family: "NHU-Regular";
+}
+.title-heading--main-text {
+  font-size: 18rem;
+  font-family: "SMLI";
+}
+.break-image-section--grid{
+    display: grid;
+    grid-template-rows: max-content 1fr;
+}
+.break-image-section-grid-row1--text{
+    width: 57rem;
+}
+.break-image-section-grid-row2--grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 6rem;
+}
+.break-image-section-grid-row2-grid--column{
+    width: 37rem;
+    height: 37rem;
 }
