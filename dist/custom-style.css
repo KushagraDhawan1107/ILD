@@ -56,6 +56,47 @@ html {
   grid-template-columns: 1fr 1fr;
 }
 
+/* Laptop Screens Below*/
+@media (max-width: 1280px) {
+  .gallery-container {
+    padding-left: 3rem !important;
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+  .movable-gallery-container {
+    margin-left: 3rem !important;
+    column-gap: 30px;
+  }
+  .movable-gallery-item {
+    width: 520px;
+    height: 550px;
+  }
+  .movable-gallery-image-container {
+    width: 520px;
+    height: 470px;
+    display: grid;
+  }
+  .movable-gallery-image {
+    width: 453px;
+    height: 470px;
+    margin-left: 4rem !important;
+  }
+  .movable-gallery-number {
+    font-size: 2rem !important;
+  }
+  .movable-gallery-project-title {
+    height: 430px;
+    font-size: 3.5rem;
+  }
+  .movable-gallery-project-detail {
+    grid-template-columns: 40px 1fr;
+    margin-top: 0.25rem;
+  }
+  .movable-gallery-project-detail p {
+    font-size: 18px;
+  }
+}
+
 /* Landscape Screens Below  */
 
 @media (max-width: 1024px) {
