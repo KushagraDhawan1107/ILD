@@ -1,0 +1,15 @@
+@font-face {
+    font-family: "SMLI";
+    src: url("assets/SMLi.ttf");
+  }
+  @font-face {
+    font-family: "NHU-Regular";
+    src: url("assets/NeueHaasUnicaPro-Regular.ttf");
+  }
+html ,body{
+    font-family: "NHU-Regular";
+}
+.title-heading-main{
+    font-size: 18rem;
+    font-family: "SMLI";
+}
