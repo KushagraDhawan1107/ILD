@@ -15,7 +15,9 @@ html {
 .cursor {
   mix-blend-mode: difference;
 }
-
+.gallery-container {
+  width: calc(100vw - var(--scrollbar-width));
+}
 .movable-gallery-container {
   display: grid;
   grid-auto-flow: column;
