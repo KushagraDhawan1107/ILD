@@ -39,3 +39,10 @@ body {
     grid-template-columns: 1fr 1fr;
     grid-gap: 2rem;
 }
+.contact-section{
+  width: calc(100vw - var(--scrollbar-width));
+  background-color: #F0F0F0;
+}
+.contact-section form{
+  margin-block-end: 0rem !important;
+}
