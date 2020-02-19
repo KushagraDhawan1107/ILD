@@ -50,10 +50,20 @@ body {
 .contact-section form {
   margin-block-end: 0rem !important;
 }
-.feature-partner-section-grid-row3--ild-year{
+.feature-partner-section-grid-row3--ild-year {
   display: grid;
   grid-template-columns: max-content 1fr max-content;
   width: 30.5rem;
   grid-gap: 20px;
   align-items: center;
+}
+.sidebar-fixed-section-grid--email {
+  margin-top: 20vh;
+  transform: rotate(-90deg);
+  transform-origin: 100% 100%;
+}
+.sidebar-fixed-section-grid--dark-mode {
+  margin-top: 30vh;
+  transform: rotate(-90deg);
+  transform-origin: 100% 100%;
 }
