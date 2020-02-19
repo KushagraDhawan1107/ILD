@@ -19,7 +19,7 @@ body {
     grid-template-rows: max-content 1fr max-content;
 }
 .break-image-section-grid-row1--text ,.break-image-section-grid-row3--text, .feature-partner-section-grid--row3{
-    width: 57rem;
+    width: 55vw;
 }
 .break-image-section-grid-row2--grid{
     display: grid;
