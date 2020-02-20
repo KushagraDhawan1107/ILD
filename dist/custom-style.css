@@ -9,6 +9,7 @@
 html,
 body {
     font-family: "NHU-Regular";
+    cursor: none;
 }
 .smli-font {
     font-family: "SMLI";
