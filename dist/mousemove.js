@@ -73,9 +73,9 @@ if (!isMobile()) {
         } else if (value === "left") {
             cursor.childNodes[1].src = "assets/arrow_left.svg";
         } else if (value === "click") {
-            cursor.childNodes[1].src = "assets/arrow_click.svg";
+            cursor.childNodes[1].src = "assets/arrow_plus.svg";
         } else if (value === "body") {
-            cursor.childNodes[1].src = "assets/default_arrow.svg";
+            cursor.childNodes[1].src = "assets/default_cursor.svg";
         }
 
         current_cursor_value = value;
