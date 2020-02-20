@@ -15,6 +15,7 @@ var is_click_area_active = false;
 var cursor = document.querySelector(".cursor");
 var mouse_areas_left = document.querySelector(".gallery_containers-left");
 var mouse_areas_right = document.querySelector(".gallery_containers-right");
+var animate_link = document.querySelectorAll(".animate-link");
 var number_of_clicks = 0;
 var current_cursor_value;
 var cursor_scroll_offset = { x: cursor.getBoundingClientRect().left, y: cursor.getBoundingClientRect().top };
@@ -112,7 +113,14 @@ if (!isMobile()) {
             gsap.to(e.childNodes[1], 1, { scale: 1, ease: "power4.out" });
         });
     });
-
+    animate_link.forEach(e => {
+        e.addEventListener("mouseover", () => {
+            gsap.to(cursor.childNodes[1], { scale: 1.3, ease: "power4.in" }, 0);
+        });
+        e.addEventListener("mouseleave", () => {
+            gsap.to(cursor.childNodes[1], { scale: 1, ease: "power4.in" }, 0);
+        });
+    });
     document.addEventListener("click", () => {
         if (current_cursor_value === "right" && number_of_clicks < movable_gallery_item.length - 2 && animation_flag === true) {
             animation_flag = false;
