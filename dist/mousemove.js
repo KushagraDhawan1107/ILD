@@ -10,16 +10,16 @@ var movable_gallery_item = document.querySelectorAll(".movable-gallery-item");
 var movable_gallery_item_image = document.querySelectorAll(".movable-gallery-image");
 var movable_gallery_project_detail = document.querySelectorAll(".movable-gallery-project-detail");
 var movable_gallery_number = document.querySelectorAll(".movable-gallery-number");
-var mousearea = document.querySelector(".gallery-container");
+var gallery_container = document.querySelector(".gallery-container");
 var is_click_area_active = false;
 var cursor = document.querySelector(".cursor");
-var mouse_areas_left = document.querySelector(".mouseareas-left");
-var mouse_areas_right = document.querySelector(".mouseareas-right");
+var mouse_areas_left = document.querySelector(".gallery_containers-left");
+var mouse_areas_right = document.querySelector(".gallery_containers-right");
 var number_of_clicks = 0;
 var current_cursor_value;
 var cursor_scroll_offset = { x: cursor.getBoundingClientRect().left, y: cursor.getBoundingClientRect().top };
 var animation_flag = true;
-var is_mousearea_active = false;
+var is_gallery_container_active = false;
 
 function isMobile() {
     return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
@@ -81,7 +81,7 @@ if (!isMobile()) {
     };
 
     var direction = () => {
-        if (is_mousearea_active) {
+        if (is_gallery_container_active) {
             if (current_mouse_pos_x <= offset_distance) {
                 return "left";
             } else {
@@ -91,11 +91,11 @@ if (!isMobile()) {
             return "body";
         }
     };
-    mousearea.addEventListener("mouseleave", () => {
-        is_mousearea_active = false;
+    gallery_container.addEventListener("mouseleave", () => {
+        is_gallery_container_active = false;
     });
-    mousearea.addEventListener("mouseenter", () => {
-        is_mousearea_active = true;
+    gallery_container.addEventListener("mouseenter", () => {
+        is_gallery_container_active = true;
         cursor_change(direction());
     });
     movable_gallery_item_image.forEach(e => {
