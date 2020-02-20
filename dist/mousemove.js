@@ -16,8 +16,8 @@ var mouse_areas_left = document.querySelector(".mouseareas-left");
 var mouse_areas_right = document.querySelector(".mouseareas-right");
 var number_of_clicks = 0;
 var current_cursor_value;
-var animation_flag = true;
 var cursor_scroll_offset = { x: cursor.getBoundingClientRect().left, y: cursor.getBoundingClientRect().top };
+var animation_flag = true;
 
 function isMobile() {
 	return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
