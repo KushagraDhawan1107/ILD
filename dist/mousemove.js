@@ -29,6 +29,17 @@ if (!isMobile()) {
         current_mouse_pos_y = e.clientY;
     });
 
+    window.addEventListener("resize", () => {
+        cursor_scroll_offset = { x: cursor.getBoundingClientRect().left, y: cursor.getBoundingClientRect().top };
+        console.log("resize");
+        gsap.to(cursor, {
+            duration: 1,
+            x: current_mouse_pos_x - cursor.getBoundingClientRect().width / 2,
+            y: current_mouse_pos_y - cursor.getBoundingClientRect().height / 2,
+            ease: "power4.out"
+        });
+    });
+
     var convert_range = current_position => {
         return ((current_position - -offset_distance) / (offset_distance - -offset_distance)) * (max_distance - -max_distance) + -max_distance;
     };
@@ -42,8 +53,8 @@ if (!isMobile()) {
 
         gsap.to(cursor, {
             duration: 1,
-            x: current_mouse_pos_x - cursor.getBoundingClientRect().width / 2 - cursor_scroll_offset.x,
-            y: current_mouse_pos_y - cursor.getBoundingClientRect().height / 2 - cursor_scroll_offset.y,
+            x: current_mouse_pos_x - cursor.getBoundingClientRect().width / 2,
+            y: current_mouse_pos_y - cursor.getBoundingClientRect().height / 2,
             ease: "power4.out"
         });
 
