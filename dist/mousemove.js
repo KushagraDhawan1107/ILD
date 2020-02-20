@@ -17,28 +17,21 @@ var mouse_areas_right = document.querySelector(".mouseareas-right");
 var number_of_clicks = 0;
 var current_cursor_value;
 var animation_flag = true;
-var current_cursor_y_position = 0;
+var cursor_scroll_offset = { x: cursor.getBoundingClientRect().left, y: cursor.getBoundingClientRect().top };
 
 function isMobile() {
 	return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 }
 
 if (!isMobile()) {
-	//place script you don't want to run on mobile here
 	document.addEventListener("mousemove", (e) => {
 		current_mouse_pos_x = e.clientX;
 		current_mouse_pos_y = e.clientY;
-		console.log(e.clientY, e.clientY);
 	});
 
 	var convert_range = (current_position) => {
 		return ((current_position - -offset_distance) / (offset_distance - -offset_distance)) * (max_distance - -max_distance) + -max_distance;
 	};
-
-	window.addEventListener("scroll", (e) => {
-		current_cursor_y_position = document.body.scrollTop;
-		console.log(current_cursor_y_position);
-	});
 
 	function render() {
 		normal_mouse_pos_x = current_mouse_pos_x - offset_distance;
@@ -49,14 +42,15 @@ if (!isMobile()) {
 
 		gsap.to(cursor, {
 			duration: 1,
-			x: current_mouse_pos_x - cursor.getBoundingClientRect().width / 2,
-			y: current_mouse_pos_y - cursor.getBoundingClientRect().height / 2,
+			x: current_mouse_pos_x - cursor.getBoundingClientRect().width / 2 - cursor_scroll_offset.x,
+			y: current_mouse_pos_y - cursor.getBoundingClientRect().height / 2 - cursor_scroll_offset.y,
 			ease: "power4.out",
 		});
 
 		if (!is_click_area_active) {
 			cursor_change(direction());
 		}
+
 		requestAnimationFrame(render);
 	}
 
@@ -159,11 +153,3 @@ if (!isMobile()) {
 		return (1 - amount) * start + amount * end;
 	};
 }
-
-class mouse_move {
-	constructor() {
-		this.a = 10;
-	}
-}
-
-var mouse_move_instance = new mouse_move();
