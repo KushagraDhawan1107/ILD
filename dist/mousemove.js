@@ -115,10 +115,10 @@ if (!isMobile()) {
     });
     animate_link.forEach(e => {
         e.addEventListener("mouseover", () => {
-            gsap.to(cursor.childNodes[1], { scale: 1.3, ease: "power4.in" }, 0);
+            gsap.to(cursor.childNodes[1], 0.4, { scale: 1.8 }, 0);
         });
         e.addEventListener("mouseleave", () => {
-            gsap.to(cursor.childNodes[1], { scale: 1, ease: "power4.in" }, 0);
+            gsap.to(cursor.childNodes[1], 0.4, { scale: 1 }, 0);
         });
     });
     document.addEventListener("click", () => {
