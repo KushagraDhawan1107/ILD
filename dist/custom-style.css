@@ -146,6 +146,165 @@ body {
 }
 
 /* Laptop Screens Below*/
+@media (max-width: 1920px) {
+    .container {
+        max-width: 1536px;
+    }
+    .sidebar-fixed-section-grid--menu {
+        font-size: 1.75rem;
+    }
+    .sidebar-fixed-section-grid--email,
+    .sidebar-fixed-section-grid--dark-mode {
+        font-size: 1rem;
+    }
+    .title-heading--main-text {
+        font-size: 21rem;
+    }
+    .break-image-section-grid-row2-grid--column {
+        width: 45rem;
+        height: 45rem;
+    }
+    .gallery-container {
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+    }
+    .movable-gallery-container {
+        margin-left: 3rem !important;
+        column-gap: 80px;
+    }
+    .movable-gallery-item {
+        width: 640px;
+        height: 720px;
+    }
+    .movable-gallery-image-container {
+        width: 640px;
+        height: 570px;
+        display: grid;
+    }
+    .movable-gallery-image {
+        width: 553px;
+        height: 570px;
+        margin-left: 4rem !important;
+    }
+    .movable-gallery-number {
+        font-size: 4rem !important;
+    }
+    .movable-gallery-project-title {
+        height: 570px;
+        font-size: 5rem;
+    }
+    .movable-gallery-project-detail {
+        grid-template-columns: 60px 1fr;
+        margin-top: 1rem;
+    }
+    .movable-gallery-project-detail p {
+        font-size: 22px;
+    }
+    .feature-partner-section-grid-row2-grid-column1--grid {
+        grid-gap: 3rem;
+    }
+    .img-size-responsive {
+        width: 20rem;
+        height: 20rem;
+    }
+}
+@media (max-width: 1600px) {
+    .gallery-container {
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+    }
+    .movable-gallery-container {
+        margin-left: 3rem !important;
+        column-gap: 50px;
+    }
+    .movable-gallery-item {
+        width: 570px;
+        height: 640px;
+    }
+    .movable-gallery-image-container {
+        width: 570px;
+        height: 520px;
+        display: grid;
+    }
+    .movable-gallery-image {
+        width: 503px;
+        height: 520px;
+        margin-left: 4rem !important;
+    }
+    .movable-gallery-number {
+        font-size: 3rem !important;
+    }
+    .movable-gallery-project-title {
+        height: 520px;
+        font-size: 4rem;
+    }
+    .movable-gallery-project-detail {
+        grid-template-columns: 50px 1fr;
+        margin-top: 1rem;
+    }
+    .movable-gallery-project-detail p {
+        font-size: 20px;
+    }
+}
+@media (max-width: 1440px) {
+    .gallery-container {
+        padding-left: 3rem !important;
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+    }
+    .movable-gallery-container {
+        margin-left: 3rem !important;
+        column-gap: 30px;
+    }
+    .movable-gallery-item {
+        width: 540px;
+        height: 570px;
+    }
+    .movable-gallery-image-container {
+        width: 540px;
+        height: 490px;
+        display: grid;
+    }
+    .movable-gallery-image {
+        width: 473px;
+        height: 490px;
+        margin-left: 4rem !important;
+    }
+    .movable-gallery-number {
+        font-size: 2rem !important;
+    }
+    .movable-gallery-project-title {
+        height: 450px;
+        font-size: 3.5rem;
+    }
+    .movable-gallery-project-detail {
+        grid-template-columns: 40px 1fr;
+        margin-top: 0.25rem;
+    }
+    .movable-gallery-project-detail p {
+        font-size: 18px;
+    }
+    .container {
+        max-width: 1152px;
+    }
+    .title-heading--main-text {
+        font-size: 16rem;
+    }
+    .break-image-section-grid-row2--grid {
+        grid-column-gap: 5rem;
+    }
+    .break-image-section-grid-row2-grid--column {
+        width: 33.5rem;
+        height: 33.5rem;
+    }
+    .feature-partner-section-grid-row2--grid {
+        grid-column-gap: 9rem;
+    }
+    .img-size-responsive {
+        width: 14.5rem;
+        height: 14.5rem;
+    }
+}
 @media (max-width: 1366px) {
     .cursor {
         width: 4rem;
@@ -197,7 +356,7 @@ body {
         font-size: 1.6rem;
     }
     .title-heading--main-text {
-        font-size: 15.25rem;
+        font-size: 15rem;
     }
     .break-image-section-grid-row1--text {
         font-size: 1.92rem;
