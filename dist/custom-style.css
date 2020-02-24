@@ -16,7 +16,6 @@ body {
 }
 .title-heading--main-text {
     font-size: 18rem;
-    font-family: "SMLI";
 }
 .break-image-section--grid {
     display: grid;
@@ -132,7 +131,6 @@ body {
     height: 592px;
     display: grid;
     align-items: center;
-    font-family: "SMLI";
 }
 
 .movable-gallery-project-detail {
@@ -148,7 +146,10 @@ body {
 }
 
 /* Laptop Screens Below*/
-@media (max-width: 1280px) {
+@media (max-width: 1366px) {
+    .cursor {
+        width: 4rem;
+    }
     .gallery-container {
         padding-left: 3rem !important;
         padding-top: 3rem !important;
@@ -185,6 +186,121 @@ body {
     }
     .movable-gallery-project-detail p {
         font-size: 18px;
+    }
+    .container {
+        max-width: 1092.8px !important;
+    }
+    .sidebar-fixed-section {
+        margin-right: 5rem;
+    }
+    .title-heading--small-text {
+        font-size: 1.6rem;
+    }
+    .title-heading--main-text {
+        font-size: 15.25rem;
+    }
+    .break-image-section-grid-row1--text {
+        font-size: 1.92rem;
+    }
+    .break-image-section-grid-row2--grid {
+        grid-column-gap: 5rem;
+    }
+    .break-image-section-grid-row3--large-text,
+    .feature-partner-section-grid--row1 {
+        font-size: 3.4rem;
+    }
+    .break-image-section-grid-row3--text {
+        font-size: 1.6rem;
+    }
+    .break-image-section-grid-row2-grid--column {
+        width: 31.5rem;
+        height: 31.5rem;
+    }
+    .feature-partner-section-grid-row2--grid {
+        grid-column-gap: 8.25rem;
+    }
+    .img-size-responsive {
+        width: 14rem;
+        height: 14rem;
+    }
+}
+
+@media (max-width: 1280px) {
+    .cursor {
+        width: 4rem;
+    }
+    .gallery-container {
+        padding-left: 3rem !important;
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+    }
+    .movable-gallery-container {
+        margin-left: 3rem !important;
+        column-gap: 30px;
+    }
+    .movable-gallery-item {
+        width: 520px;
+        height: 550px;
+    }
+    .movable-gallery-image-container {
+        width: 520px;
+        height: 470px;
+        display: grid;
+    }
+    .movable-gallery-image {
+        width: 453px;
+        height: 470px;
+        margin-left: 4rem !important;
+    }
+    .movable-gallery-number {
+        font-size: 2rem !important;
+    }
+    .movable-gallery-project-title {
+        height: 430px;
+        font-size: 3.5rem;
+    }
+    .movable-gallery-project-detail {
+        grid-template-columns: 40px 1fr;
+        margin-top: 0.25rem;
+    }
+    .movable-gallery-project-detail p {
+        font-size: 18px;
+    }
+    .container {
+        max-width: 1024px !important;
+    }
+    .sidebar-fixed-section {
+        margin-right: 4rem;
+    }
+    .title-heading--small-text {
+        font-size: 1.5rem;
+    }
+    .break-image-section-grid-row1--text {
+        font-size: 2rem;
+    }
+    .break-image-section-grid-row3--text {
+        font-size: 1.5rem;
+    }
+    .title-heading--main-text {
+        font-size: 14.5rem;
+    }
+    .break-image-section-grid-row3--large-text,
+    .feature-partner-section-grid--row1 {
+        font-size: 3.2rem;
+    }
+    .break-image-section-grid-row2--grid {
+        grid-column-gap: 5rem;
+    }
+    .break-image-section-grid-row2-grid--column {
+        width: 29.5rem;
+        height: 29.5rem;
+    }
+    .feature-partner-section-grid-row2--grid {
+        grid-column-gap: 8rem;
+    }
+    .img-size-responsive {
+        width: 12.8rem;
+        height: 12.8rem;
     }
 }
 
