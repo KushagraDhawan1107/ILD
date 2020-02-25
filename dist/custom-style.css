@@ -15,7 +15,7 @@ body {
     font-family: "SMLI";
 }
 .title-heading--main-text {
-    font-size: 18rem;
+    font-size: 17rem;
 }
 .break-image-section--grid {
     display: grid;
@@ -78,7 +78,7 @@ body {
     align-items: center;
 }
 .projects-section {
-    width: calc(100vw - var(--scrollbar-width));
+    width: calc(100vw - (--scrollbar-width));
 }
 .ild-section {
     position: fixed;
@@ -104,7 +104,7 @@ body {
     mix-blend-mode: difference;
 }
 .gallery-container {
-    width: calc(100vw - var(--scrollbar-width));
+    width: auto;
 }
 .movable-gallery-container {
     display: grid;
@@ -146,7 +146,7 @@ body {
 }
 
 /* Laptop Screens Below*/
-@media (max-width: 1920px) {
+@media (min-width: 1601px) and (max-width: 1920px) {
     .container {
         max-width: 1536px;
     }
@@ -208,7 +208,7 @@ body {
         height: 20rem;
     }
 }
-@media (max-width: 1600px) {
+@media only screen and (max-width: 1600px) {
     .gallery-container {
         padding-top: 3rem !important;
         padding-bottom: 3rem !important;
@@ -351,6 +351,9 @@ body {
     }
     .sidebar-fixed-section {
         margin-right: 5rem;
+    }
+    .sidebar-fixed-section-grid--email {
+        margin-top: 15vh;
     }
     .title-heading--small-text {
         font-size: 1.6rem;
@@ -694,34 +697,34 @@ body {
 }
 @media (max-width: 375px) {
     .gallery-container {
-        padding-left: 0px !important;
-        padding-top: 2rem !important;
-        padding-bottom: 2rem !important;
+        padding-left: 1rem !important;
+        padding-top: 0rem !important;
+        padding-bottom: 0rem !important;
     }
     .movable-gallery-container {
-        margin-left: 2rem !important;
+        margin-left: 1rem !important;
         column-gap: 20px;
     }
     .movable-gallery-item {
-        width: 288px;
-        height: 528px;
+        width: 292px;
+        height: 460px;
     }
     .movable-gallery-image-container {
-        width: 288px;
-        height: 450px;
+        width: 292px;
+        height: 380px;
         display: grid;
     }
     .movable-gallery-image {
-        width: 256px;
-        height: 450px;
-        margin-left: 2rem !important;
+        width: 250px;
+        height: 380px;
+        margin-left: 2.6rem !important;
     }
     .movable-gallery-number {
         font-size: 2rem !important;
     }
     .movable-gallery-project-title {
-        height: 450px;
-        font-size: 3rem;
+        height: 380px;
+        font-size: 2.25rem;
     }
     .movable-gallery-project-detail {
         grid-template-columns: 46px 1fr;
@@ -733,6 +736,139 @@ body {
     .mouseareas,
     .cursor {
         display: none;
+    }
+    .sidebar-fixed-section {
+        display: none;
+    }
+    .container {
+        max-width: 100% !important;
+        padding-top: 5rem !important;
+        padding-right: 0.625rem;
+        padding-left: 0.625rem;
+    }
+    .title-heading--small-text p {
+        font-size: 0.5rem !important;
+    }
+    .title-heading--main-text {
+        font-size: 4.3rem;
+        margin-top: 10px;
+        line-height: 78px;
+    }
+    .title-heading-main-text--mobile-margin-top {
+        margin-top: 0px;
+    }
+    .break-image-section-grid-row2--grid {
+        grid-template-columns: 1fr;
+        grid-gap: 1.25rem;
+    }
+    .break-image-section-grid-row2-grid--column {
+        width: 18.75rem;
+        height: 18.75rem;
+    }
+    .title-heading {
+        width: 100%;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    .break-image-section--grid {
+        padding-top: 5rem;
+    }
+    .break-image-section-grid-row1--text {
+        width: 100% !important;
+        font-size: 1.125rem;
+        margin-top: 3.5rem;
+    }
+    .break-image-section-grid--row2 {
+        padding-top: 4rem;
+        margin: auto;
+    }
+    .break-image-section-grid--row3 {
+        padding-top: 3rem;
+    }
+    .break-image-section-grid-row3--large-text,
+    .feature-partner-section-grid--row1 {
+        font-size: 2.25rem;
+    }
+    .break-image-section-grid-row3--text {
+        margin-top: 3.5rem !important;
+        width: 100%;
+        font-size: 14px;
+    }
+    .projects-section {
+        margin-left: 0px;
+        margin-top: 4rem;
+    }
+    .feature-partner-section--grid {
+        padding-top: 7.35rem;
+        padding-bottom: 5rem;
+    }
+    .feature-partner-section-grid--row2 {
+        padding-top: 2.25rem;
+    }
+    .feature-partner-section-grid-row2--grid {
+        grid-template-columns: 1fr;
+    }
+    .feature-partner-section-grid-row2-grid-column1--grid,
+    .feature-partner-section-grid-row2-grid-column2--grid {
+        grid-gap: 1.25rem;
+    }
+    .feature-product-grid--text,
+    .feature-project-grid--text {
+        font-size: 10px;
+    }
+    .feature-product-grid img,
+    .feature-project-grid img {
+        width: 0.75rem;
+    }
+    .feature-product-grid,
+    .feature-project-grid {
+        grid-column-gap: 0.5rem;
+    }
+    .img-size-responsive {
+        width: 10.25rem;
+        height: 10.25rem;
+    }
+    .feature-partner-section-grid-row2-grid-column1--grid,
+    .feature-partner-section-grid-row2-grid-column2--heading {
+        padding-top: 2.25rem;
+    }
+    .feature-partner-section-grid-row2-grid-column1--heading,
+    .feature-partner-section-grid-row2-grid-column2--heading {
+        font-size: 14px;
+    }
+    .feature-partner-section-grid--row3 {
+        padding-top: 5.5rem;
+    }
+    .feature-partner-section-grid-row3--ild-year {
+        font-size: 1.25rem;
+        width: 100%;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    .feature-partner-section-grid--row3 {
+        width: 100%;
+    }
+    .feature-partner-section-grid-row3--ild-trust-text {
+        margin-top: 5rem;
+        font-size: 16px;
+    }
+    .feature-partner-section-grid-row3--ild-trust-text p {
+        font-size: 16px;
+    }
+    .contact-section--lets-talk {
+        font-size: 1.875rem;
+        padding-top: 4rem;
+    }
+    .contact-section--text-1,
+    .contact-section--text-2 {
+        font-size: 0.725rem;
+    }
+    .contact-section--text-1,
+    .contact-section-form {
+        padding-top: 2.5rem;
+    }
+    .contact-section-form input {
+        font-size: 1.25rem;
     }
 }
 @media (max-width: 320px) {
