@@ -867,14 +867,22 @@ body {
     .contact-section-form {
         padding-top: 2.5rem;
     }
+    .contact-section-form {
+        padding-bottom: 2.5rem;
+    }
     .contact-section-form input {
         font-size: 1.25rem;
     }
-    .feature-partner-section-grid--row3 button,
+    .feature-partner-section-grid--row3 button {
+        font-size: 0.5rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
     .contact-section-form button {
         font-size: 0.5rem;
         padding-left: 3rem;
         padding-right: 3rem;
+        margin-top: 3rem;
     }
 }
 @media (max-width: 320px) {
