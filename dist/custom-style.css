@@ -80,23 +80,39 @@ body {
 .projects-section {
     width: calc(100vw - (--scrollbar-width));
 }
-.ild-section {
+
+/*
+*Smooth page scroll style rules start here
+*
+*/
+.viewport {
+    overflow: hidden;
     position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
+    height: 100%;
     width: 100%;
-    overflow: auto;
-    -webkit-overflow-scrolling: touch;
-}
-.ild-section__scroll {
-    position: fixed;
-    z-index: -1;
-    top: 0;
+    top: 0px;
     left: 0;
-    width: 100%;
-    will-change: transform;
-}
+    right: 0;
+    bottom: 0;
+  }
+  
+  .scroll-container {  
+    position: relative;  
+    top: 800px;
+    background-color: #ffffff;
+    overflow: hidden;
+    z-index: 10;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+  }
+  
+  .fixed-top-section{
+      position: fixed;
+  }
+/*
+*Smooth page scroll style rules end here
+*
+*/
 
 /* Gallery CSS starts */
 
