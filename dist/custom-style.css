@@ -94,21 +94,21 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-  }
-  
-  .scroll-container {  
-    position: relative;  
+}
+
+.scroll-container {
+    position: relative;
     background-color: #ffffff;
     z-index: 10;
     backface-visibility: hidden;
     transform-style: preserve-3d;
-  }
-  .content{
-    margin-top: 110vh;  
-  }
-  .fixed-top-section{
-      position: fixed;
-  }
+}
+.content {
+    margin-top: 110vh;
+}
+.fixed-top-section {
+    position: fixed;
+}
 /*
 *Smooth page scroll style rules end here
 *
@@ -162,68 +162,6 @@ body {
 }
 
 /* Laptop Screens Below*/
-@media (min-width: 1601px) and (max-width: 1920px) {
-    .container {
-        max-width: 1536px;
-    }
-    .sidebar-fixed-section-grid--menu {
-        font-size: 1.75rem;
-    }
-    .sidebar-fixed-section-grid--email,
-    .sidebar-fixed-section-grid--dark-mode {
-        font-size: 1rem;
-    }
-    .title-heading--main-text {
-        font-size: 21rem;
-    }
-    .break-image-section-grid-row2-grid--column {
-        width: 45rem;
-        height: 45rem;
-    }
-    .gallery-container {
-        padding-top: 3rem !important;
-        padding-bottom: 3rem !important;
-    }
-    .movable-gallery-container {
-        margin-left: 3rem !important;
-        column-gap: 80px;
-    }
-    .movable-gallery-item {
-        width: 640px;
-        height: 720px;
-    }
-    .movable-gallery-image-container {
-        width: 640px;
-        height: 570px;
-        display: grid;
-    }
-    .movable-gallery-image {
-        width: 553px;
-        height: 570px;
-        margin-left: 4rem !important;
-    }
-    .movable-gallery-number {
-        font-size: 4rem !important;
-    }
-    .movable-gallery-project-title {
-        height: 570px;
-        font-size: 5rem;
-    }
-    .movable-gallery-project-detail {
-        grid-template-columns: 60px 1fr;
-        margin-top: 1rem;
-    }
-    .movable-gallery-project-detail p {
-        font-size: 22px;
-    }
-    .feature-partner-section-grid-row2-grid-column1--grid {
-        grid-gap: 3rem;
-    }
-    .img-size-responsive {
-        width: 20rem;
-        height: 20rem;
-    }
-}
 @media only screen and (max-width: 1600px) {
     .gallery-container {
         padding-top: 3rem !important;
