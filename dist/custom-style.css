@@ -680,6 +680,9 @@ body {
         height: 380px;
         font-size: 2.25rem;
     }
+    .content .container {
+        padding-top: 5rem;
+    }
     .movable-gallery-project-detail {
         grid-template-columns: 46px 1fr;
         margin-top: 0.5rem;
@@ -694,11 +697,11 @@ body {
     .sidebar-fixed-section {
         display: none;
     }
-    .container {
-        max-width: 100% !important;
-        padding-top: 5rem !important;
-        padding-right: 0.625rem;
-        padding-left: 0.625rem;
+    .content {
+        margin-top: 50vh;
+    }
+    .fixed-top-section {
+        padding-top: 5rem;
     }
     .title-heading--small-text p {
         font-size: 0.5rem !important;
@@ -725,7 +728,7 @@ body {
         padding-right: 1.5rem;
     }
     .break-image-section--grid {
-        padding-top: 5rem;
+        padding-top: 0rem;
     }
     .break-image-section-grid-row1--text {
         width: 100% !important;
