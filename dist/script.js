@@ -6,8 +6,24 @@ document.documentElement.style.setProperty("--scrollbar-width", window.innerWidt
 *Smooth page scroll
 *
 */
+
+
+function getAbsoluteHeight(el) {
+  // Get the DOM Node if you pass in a string
+  el = (typeof el === 'string') ? document.querySelector(el) : el; 
+
+  var styles = window.getComputedStyle(el);
+  var margin = parseFloat(styles['marginTop']) +
+               parseFloat(styles['marginBottom']);
+
+  return Math.ceil(el.offsetHeight + margin);
+}
+
 var html = document.documentElement;
 var body = document.body;
+var el = document.querySelector(".content");
+var marginTop = parseInt(window.getComputedStyle(el).getPropertyValue('margin-top'));
+console.log(marginTop);
 
 var scroller = {
   target: document.querySelector("#scroll-container"),
@@ -39,7 +55,7 @@ function updateScroller() {
   var resized = scroller.resizeRequest > 0;
     
   if (resized) {    
-    var height = scroller.target.clientHeight;
+    var height = scroller.target.clientHeight + marginTop;
     body.style.height = height + "px";
     scroller.resizeRequest = 0;
   }
