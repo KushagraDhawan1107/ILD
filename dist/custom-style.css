@@ -78,7 +78,7 @@ body {
     align-items: center;
 }
 .projects-section {
-    width: calc(100vw - (--scrollbar-width));
+    width: calc(100vw - var(--scrollbar-width));
 }
 
 /*
@@ -102,9 +102,10 @@ body {
     z-index: 10;
     backface-visibility: hidden;
     transform-style: preserve-3d;
+    box-shadow: #ffffff 0px 0px 80px 130px;
 }
 .content {
-    margin-top: 110vh;
+    margin-top: 95vh;
 }
 .fixed-top-section {
     position: fixed;
@@ -681,7 +682,7 @@ body {
         font-size: 2.25rem;
     }
     .content .container {
-        padding-top: 5rem;
+        padding-top: 0rem;
     }
     .movable-gallery-project-detail {
         grid-template-columns: 46px 1fr;
@@ -698,10 +699,10 @@ body {
         display: none;
     }
     .content {
-        margin-top: 50vh;
+        margin-top: 63vh;
     }
     .fixed-top-section {
-        padding-top: 5rem;
+        padding-top: 4rem;
     }
     .title-heading--small-text p {
         font-size: 0.5rem !important;
