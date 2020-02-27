@@ -134,6 +134,7 @@ body {
     height: 35vw;
     display: grid;
     align-items: center;
+    mix-blend-mode: difference;
 }
 
 .movable-gallery-project-detail {
