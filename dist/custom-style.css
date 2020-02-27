@@ -15,7 +15,7 @@ body {
     font-family: "SMLI";
 }
 .title-heading--main-text {
-    font-size: 16rem;
+    font-size: 16vw;
 }
 .break-image-section--grid {
     display: grid;
@@ -78,6 +78,9 @@ body {
 }
 .projects-section {
     width: calc(100vw - var(--scrollbar-width));
+}
+.img-size-responsive {
+    height: 16vw;
 }
 
 /* Smooth page scroll style rules start here */
@@ -150,3 +153,11 @@ body {
 }
 
 /* Gallery CSS ends */
+
+/* Media queries starts here  */
+
+@media (max-width: 1280px) {
+    .container {
+        max-width: 1024px;
+    }
+}
