@@ -153,9 +153,6 @@ body {
 }
 
 /* Gallery CSS ends */
-.temp-para {
-    display: none;
-}
 
 /* Media queries for landscape */
 @media (max-width: 1920px) and (orientation: landscape) and (min-height: 500px) {
