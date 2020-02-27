@@ -80,10 +80,7 @@ body {
     width: calc(100vw - var(--scrollbar-width));
 }
 
-/*
-*Smooth page scroll style rules start here
-*
-*/
+/* Smooth page scroll style rules start here */
 .viewport {
     overflow: hidden;
     position: fixed;
@@ -109,10 +106,7 @@ body {
 .fixed-top-section {
     position: fixed;
 }
-/*
-*Smooth page scroll style rules end here
-*
-*/
+/* Smooth page scroll style rules end here */
 
 /* Gallery CSS starts */
 
@@ -153,3 +147,5 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
+
+/* Gallery CSS ends */
