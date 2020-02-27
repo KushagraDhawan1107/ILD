@@ -132,19 +132,19 @@ body {
 }
 
 .movable-gallery-image {
-    width: 512px;
-    height: 592px;
+    width: 30vw;
+    height: 35vw;
 }
 
 .movable-gallery-project-title {
-    height: 592px;
+    height: 35vw;
     display: grid;
     align-items: center;
 }
 
 .movable-gallery-project-detail {
     display: grid;
-    grid-template-columns: 96px 1fr;
+    grid-template-columns: 80px 1fr;
     align-items: center;
     column-gap: 32px;
 }
