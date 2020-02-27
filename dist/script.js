@@ -20,7 +20,6 @@ var html = document.documentElement;
 var body = document.body;
 var el = document.querySelector(".content");
 var marginTop = parseInt(window.getComputedStyle(el).getPropertyValue("margin-top"));
-console.log(marginTop);
 
 var scroller = {
     target: document.querySelector("#scroll-container"),
