@@ -16,6 +16,8 @@ var cursor = document.querySelector(".cursor");
 var mouse_areas_left = document.querySelector(".gallery_containers-left");
 var mouse_areas_right = document.querySelector(".gallery_containers-right");
 var animate_link = document.querySelectorAll(".animate-link");
+var feature_items_on_hover_animation = document.querySelectorAll(".feature-items-on-hover-animation");
+feature_items_text_on_hover_animation = document.querySelectorAll(".feature-items-text-on-hover-animation");
 var number_of_clicks = 0;
 var current_cursor_value;
 var cursor_scroll_offset = { x: cursor.getBoundingClientRect().left, y: cursor.getBoundingClientRect().top };
@@ -99,6 +101,20 @@ if (!isMobile()) {
         is_gallery_container_active = true;
         cursor_change(direction());
     });
+
+    feature_items_on_hover_animation.forEach(e => {
+        e.addEventListener("mouseenter", () => {
+            cursor_change("click");
+            is_click_area_active = true;
+            gsap.to(e, 1, { css: { transform: "scale(1.15)" }, ease: "power4.out" });
+        });
+        e.addEventListener("mouseleave", () => {
+            cursor_change("body");
+            is_click_area_active = false;
+            gsap.to(e, 1, { css: { transform: "scale(1)" }, ease: "power4.out" });
+        });
+    });
+
     movable_gallery_item_image.forEach(e => {
         e.addEventListener("mouseenter", () => {
             cursor_change("click");
