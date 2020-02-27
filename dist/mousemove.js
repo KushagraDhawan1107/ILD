@@ -142,7 +142,7 @@ if (!isMobile()) {
             animation_flag = false;
             var gallery_item_move_timeline = new gsap.timeline();
             gallery_item_move_timeline
-                .to(movable_gallery_item, 2, {
+                .to(movable_gallery_item, 1.5, {
                     x: "-=" + (movable_gallery_item[0].getBoundingClientRect().width + 80),
                     ease: "power4.inOut"
                 })
@@ -164,7 +164,7 @@ if (!isMobile()) {
             animation_flag = false;
             var gallery_item_move_timeline = new gsap.timeline();
             gallery_item_move_timeline
-                .to(movable_gallery_item, 2, {
+                .to(movable_gallery_item, 1.5, {
                     x: "+=" + (movable_gallery_item[0].getBoundingClientRect().width + 80),
                     ease: "power4.inOut"
                 })
