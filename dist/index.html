@@ -12,6 +12,41 @@
         <div class="cursor w-20 fixed z-50 pointer-events-none top-0 left-0">
             <img src="assets/default_cursor.svg" alt="" />
         </div>
+        <!-- Menu Starts -->
+        <div class="menu fixed h-screen w-screen hidden z-40">
+            <div class="menu--container">
+                <div class="menu-background absolute h-0 w-screen left-0 top-0 bg-gray-900"></div>
+                <div class="menu-container--content relative">
+                    <div class="menu-container-content--titles h-100 z-50 w-full absolute">
+                        <div class="menu-container-content-titles--grid py-16">
+                            <div class="overflow-y-hidden">
+                                <h1 class="uppercase smli-font mx-auto text-white opacity-30 menu-animation animate-link">About</h1>
+                            </div>
+                            <div class="overflow-y-hidden">
+                                <h1 class="uppercase smli-font mx-auto text-white opacity-30 menu-animation animate-link">Work</h1>
+                            </div>
+                            <div class="overflow-y-hidden">
+                                <h1 class="uppercase smli-font mx-auto text-white opacity-30 menu-animation animate-link">Brands</h1>
+                            </div>
+                            <div class="overflow-y-hidden">
+                                <h1 class="uppercase smli-font mx-auto text-white opacity-30 menu-animation animate-link">Contact</h1>
+                            </div>
+                            <div class="overflow-y-hidden">
+                                <h1 class="uppercase smli-font mx-auto text-white opacity-30 menu-animation animate-link">Careers</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-container-content--rotating-pictures absolute">
+                        <img src="assets/img/1.jpg" alt="" class="absolute image animation-rotation object-cover opacity-0" />
+                        <img src="assets/img/2.jpg" alt="" class="absolute image animation-rotation object-cover opacity-0" />
+                        <img src="assets/img/3.jpg" alt="" class="absolute image animation-rotation object-cover opacity-0" />
+                        <img src="assets/img/4.jpg" alt="" class="absolute image animation-rotation object-cover opacity-0" />
+                        <img src="assets/img/1.jpg" alt="" class="absolute image animation-rotation object-cover opacity-0" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Menu Ends -->
         <!-- Sidebar Section starts -->
         <div class="sidebar-fixed-section pt-24 fixed mr-24 right-0 h-full z-50 pointer-events-none">
             <p class="text-xl sidebar-fixed-section-grid--menu smli-font uppercase text-right text-gray-900 pointer-events-auto  animate-link">Menu</p>
@@ -323,4 +358,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/ScrollToPlugin.min.js"></script>
     <script src="mousemove.js"></script>
     <script src="script.js"></script>
+    <script src="menu.js"></script>
 </html>

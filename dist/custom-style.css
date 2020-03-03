@@ -179,6 +179,40 @@ body {
     grid-template-columns: 1fr 1fr;
 }
 
+/* Menu CSS starts */
+.menu--container {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+.menu-container--content {
+    width: 90vw;
+    height: 90vh;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+.menu-container-content-titles--grid {
+    display: grid;
+    grid-template-columns: repeat(5, max-content);
+    justify-content: space-between;
+    font-size: 4vw;
+}
+.menu-container-content--rotating-pictures {
+    width: 25vw;
+    height: 60vh;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+.animation-rotation {
+    width: calc(25vw / 2);
+    height: calc(60vh / 2);
+    transform: rotate(-30deg);
+}
+
+/* Menu CSS ends */
 /* Gallery CSS ends */
 
 /* Media queries for landscape */
