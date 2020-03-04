@@ -83,7 +83,6 @@ menu_toggler.addEventListener("click", () => {
     }
     menu_animation.forEach((e, f) => {
         e.addEventListener("mouseenter", () => {
-            console.log(f);
             gsap.to(rotating_picture_container_images[f], 0.7, { rotation: 0, scale: 2, opacity: 1 });
             gsap.to(menu_animation[f], 1, { opacity: 1 });
         });
