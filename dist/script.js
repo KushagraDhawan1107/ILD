@@ -85,3 +85,65 @@ function onResize() {
 		requestId = requestAnimationFrame(updateScroller);
 	}
 }
+
+/** button code */
+
+var temp_button = document.querySelector(".temp-button");
+var button_background = temp_button.querySelector(".button-background");
+let button_animation_timeline = new gsap.timeline({ paused: true, defaults: { ease: "power2.inOut" } });
+var button_first_text = document.querySelector(".button-first-text");
+var button_second_text = document.querySelector(".button-second-text");
+var a = button_first_text.innerHTML.split("");
+var b = button_second_text.innerHTML.split("");
+var button_animation_duration = 0.75;
+
+button_first_text.innerHTML = "";
+button_second_text.innerHTML = "";
+
+a.forEach((e) => {
+	console.log(e);
+	button_first_text.innerHTML = button_first_text.innerHTML + "<span>" + e + "</span>";
+});
+
+b.forEach((e) => {
+	console.log(e);
+	button_second_text.innerHTML = button_second_text.innerHTML + "<span>" + e + "</span>";
+});
+
+button_animation_timeline
+	.to(
+		button_background,
+		button_animation_duration,
+		{
+			height: "100px",
+		},
+		button_animation_duration / 3
+	)
+	.to(
+		".button-first-text span",
+		button_animation_duration,
+		{
+			y: "-1rem",
+			stagger: 0.01,
+		},
+		0
+	)
+	.to(
+		".button-second-text span",
+		button_animation_duration,
+		{
+			y: "0rem",
+			stagger: 0.01,
+		},
+		button_animation_duration / 3
+	);
+
+button_animation_timeline.timeScale(1.2);
+
+temp_button.addEventListener("mouseenter", () => {
+	button_animation_timeline.play();
+});
+
+temp_button.addEventListener("mouseleave", () => {
+	button_animation_timeline.reverse();
+});
