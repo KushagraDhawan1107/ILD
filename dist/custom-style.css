@@ -3,13 +3,13 @@
     src: url("assets/SMLi.ttf");
 }
 @font-face {
-    font-family: "NHU-Regular";
-    src: url("assets/NeueHaasUnicaPro-Regular.ttf");
+    font-family: "Helvetica";
+    src: url("assets/HelveticaNeue.ttf");
 }
 
 html,
 body {
-    font-family: "NHU-Regular";
+    font-family: "Helvetica";
     cursor: none;
 }
 
@@ -17,8 +17,8 @@ body {
     width: 80vw;
     margin-left: 10vw;
 }
-.nhu-regular {
-    font-family: "NHU-Regular";
+.Helvetica {
+    font-family: "Helvetica";
 }
 .smli-font {
     font-family: "SMLI";
@@ -28,11 +28,23 @@ body {
     font-size: 28vh;
 }
 
+.letter-spacing-2 {
+    letter-spacing: 2px;
+}
+.letter-spacing-4 {
+    letter-spacing: 4px;
+}
+.letter-spacing-10 {
+    letter-spacing: 10px;
+}
 .break-image-section--grid {
     display: grid;
     grid-template-rows: max-content 1fr max-content;
 }
-
+.sidebar-fixed-section-grid--div {
+    transform: rotate(-90deg);
+    transform-origin: 100% 100%;
+}
 .break-image-section-grid-row1--text,
 .break-image-section-grid-row3--text,
 .feature-partner-section-grid--row3,
@@ -145,16 +157,16 @@ body {
 
 .movable-gallery-image {
     width: 50vh;
-    height: 60vh;
+    height: 50vh;
 }
 
 .movable-gallery-project-title {
     width: 100%;
-    height: 60vh;
+    height: 50vh;
     display: grid;
     align-items: center;
     mix-blend-mode: difference;
-    font-size: 4.5vw;
+    font-size: 3.5vw;
 }
 
 .movable-gallery-project-detail {
