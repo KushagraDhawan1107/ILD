@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="style.css" />
+		<style>
+			.grid-background-image {
+				height: 1920px;
+				width: 1920px !important;
+				max-width: none !important;
+				opacity: 0.05;
+			}
+
+			.grid-background-container-div {
+				overflow: hidden;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- to be used on dark background -->
+		<div class="grid-background-container-div h-screen w-screen fixed top-0 left-0">
+			<img class="grid-background-image" src="assets/img/grid.png" alt="" />
+		</div>
+
+		<!-- to be used on light background -->
+		<div class="grid-background-container-div h-screen w-screen fixed top-0 left-0">
+			<img class="grid-background-image" src="assets/img/grid-light.png" alt="" />
+		</div>
+	</body>
+</html>
