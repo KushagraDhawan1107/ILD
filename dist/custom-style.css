@@ -17,13 +17,15 @@ body {
     width: 80vw;
     margin-left: 10vw;
 }
-
+.nhu-regular {
+    font-family: "NHU-Regular";
+}
 .smli-font {
     font-family: "SMLI";
 }
 
 .title-heading--main-text {
-    font-size: 30vh;
+    font-size: 28vh;
 }
 
 .break-image-section--grid {
@@ -40,25 +42,18 @@ body {
 
 .break-image-section-grid-row2--grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 15vh;
 }
 
 .break-image-section-grid-row2-grid--column {
     height: calc(60vh);
 }
-
-.feature-partner-section-grid-row2--grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 10vw;
-}
-
 .feature-partner-section-grid-row2-grid-column1--grid,
 .feature-partner-section-grid-row2-grid-column2--grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 2vw;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 5vw;
 }
 
 .contact-section {
@@ -83,7 +78,7 @@ body {
     transform-origin: 100% 100%;
 }
 
-.sidebar-fixed-section-grid--dark-mode {
+.sidebar-fixed-section-grid-dark-mode--text {
     margin-top: 30vh;
     transform: rotate(-90deg);
     transform-origin: 100% 100%;
@@ -93,7 +88,7 @@ body {
 .feature-product-grid,
 .feature-project-grid {
     display: grid;
-    grid-template-columns: max-content max-content;
+    grid-template-columns: max-content 1fr max-content;
     grid-column-gap: 1rem;
     align-items: center;
 }
@@ -101,10 +96,11 @@ body {
 .projects-section {
     width: calc(100vw - var(--scrollbar-width));
     margin-left: -10vw;
+    background: linear-gradient(-45deg, #e0e0e0, #ffffff);
 }
 
 .img-size-responsive {
-    height: 30vh;
+    height: 45vh;
 }
 
 /* Smooth page scroll style rules start here */
@@ -126,15 +122,6 @@ body {
     z-index: 10;
     backface-visibility: hidden;
     transform-style: preserve-3d;
-    box-shadow: #fff 0px 0px 8vh 10vh;
-}
-
-.content {
-    margin-top: 110vh;
-}
-
-.fixed-top-section {
-    position: fixed;
 }
 
 /* Smooth page scroll style rules end here */
@@ -162,10 +149,12 @@ body {
 }
 
 .movable-gallery-project-title {
+    width: 100%;
     height: 60vh;
     display: grid;
     align-items: center;
     mix-blend-mode: difference;
+    font-size: 4.5vw;
 }
 
 .movable-gallery-project-detail {
