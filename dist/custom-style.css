@@ -55,7 +55,7 @@ body {
 .break-image-section-grid-row2--grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 15vh;
+    grid-column-gap: 5vw;
 }
 
 .break-image-section-grid-row2-grid--column {
