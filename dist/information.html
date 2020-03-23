@@ -1,0 +1,94 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+        <title>ILD - AboutUS</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="custom-style.css" />
+        <style>
+            .information-container--grid {
+                display: grid;
+                grid-template-rows: max-content max-content 1fr;
+            }
+            .information-container-grid--image-container {
+                width: 40vw;
+                height: 40vw;
+            }
+            .information-container-grid--info-container {
+                width: 40vw;
+            }
+        </style>
+    </head>
+    <body class="select-none antialiased break-words">
+        <div class="cursor w-20 fixed z-50 pointer-events-none top-0 left-0">
+            <img src="assets/default_cursor.svg" alt="" />
+        </div>
+        <section class="viewport">
+            <div id="scroll-container" class="scroll-container">
+                <div class="content">
+                    <div class="relative">
+                        <div class="background-color-section w-screen h-screen bg-gray-100 absolute"></div>
+                        <!-- Container starts -->
+                        <div class="content-container relative">
+                            <div class="information-container pt-24 ">
+                                <div class="information-container--grid">
+                                    <div class="information-container-grid--heading-container information-grid-row-1 mx-auto text-center">
+                                        <p class="information-number text-2xl smli-font text-gray-900">01</p>
+
+                                        <p class="information-year mt-8 text-sm uppercase text-gray-500">March 2019</p>
+
+                                        <p class="information-name mt-8 text-5xl letter-spacing-10 smli-font text-gray-900 uppercase">Kusum Sarovar Gates</p>
+                                    </div>
+                                    <div class="information-container-grid--image-container mx-auto mt-20 information-grid-row-2">
+                                        <img src="assets/img/1.jpg" alt="" class="object-cover w-full h-full" />
+                                    </div>
+                                    <div class="information-container-grid--info-container mx-auto mt-20 information-grid-row-3">
+                                        <p class="smli-font text-xl uppercase letter-spacing-4 text-center">About Innovative lighting designs</p>
+                                        <p class="text-3xl text-center mt-20 leading-tight">Welcome to the future in lighting solutions. We don’t just do lighting. We do aesthetic illumination, paired with pioneering technology that is both user-friendly and cutting edge.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="break-image-section information-page-break-section">
+                                <div class="break-image-section--grid information-page-break-section--grid pt-32 w-full">
+                                    <div class="break-image-section-grid--row information-page-break-section-gird--row">
+                                        <div class="break-image-section-grid-row2--grid">
+                                            <div class="break-image-section-grid-row2-grid--column bg-gray-800"></div>
+                                            <div class="break-image-section-grid-row2-grid--column bg-gray-800 mt-16"></div>
+                                            <div class="break-image-section-grid-row2-grid--column bg-gray-800"></div>
+                                        </div>
+                                    </div>
+                                    <div class="break-image-section-grid--row pt-32 information-page-break-section-gird--row">
+                                        <div class="break-image-section-grid-row2--grid">
+                                            <div class="break-image-section-grid-row2-grid--column bg-gray-800"></div>
+                                            <div class="break-image-section-grid-row2-grid--column bg-gray-800 mt-16"></div>
+                                            <div class="break-image-section-grid-row2-grid--column bg-gray-800"></div>
+                                        </div>
+                                    </div>
+                                    <div class="break-image-section-grid--row information-page-break-section-gird--row  pt-48">
+                                        <p class="break-image-section-grid-row3--large-text leading-tight text-5xl text-center letter-spacing-10 uppercase text-gray-900 smli-font"><span class="text-gray-500">02 / </span> Projects by ild</p>
+                                        <div class="break-image-section-grid-row3--text text-gray-900 text-2xl text-center mt-16 mx-auto leading-snug">
+                                            <p>
+                                                Innovation is more than a buzzword for us, it’s a way of life. At ILD, we understand the value that lighting adds to architecture and space design. Our aim is to create energy efficient, technology-driven and aesthetically stunning lighting solutions
+                                                for our clients across various segments.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- main section ends  -->
+    </body>
+
+    <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/ScrollToPlugin.min.js"></script>
+    <script src="mousemove.js"></script>
+    <script src="script.js"></script>
+    <script src="menu.js"></script>
+</html>
