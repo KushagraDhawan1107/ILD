@@ -110,7 +110,6 @@ body {
     margin-left: -10vw;
     background: linear-gradient(-45deg, #e0e0e0, #ffffff);
 }
-
 .img-size-responsive {
     height: 45vh;
 }
@@ -237,6 +236,43 @@ body {
     transform: rotate(-30deg);
 }
 
+.about-us-stats-section {
+    width: calc(100vw - var(--scrollbar-width));
+    margin-left: -10vw;
+}
+.about-us-stats-section--container {
+    width: auto;
+}
+.about-us-stats-section-container--grid {
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: 8vw;
+}
+.stat-item-container-grid {
+    display: grid;
+    grid-template-rows: max-content 1fr;
+}
+.stats-item-container {
+    width: 35vw;
+}
+.stats-image-container {
+    display: grid;
+    margin-top: -12vh;
+}
+.stats-number {
+    font-size: 10vw;
+}
+.stats-image {
+    height: 40vh;
+    width: 40vh;
+}
+.stats-info-container {
+    width: 100%;
+    height: 40vh;
+    display: grid;
+    align-items: center;
+    mix-blend-mode: difference;
+}
 /* Menu CSS ends */
 /* Gallery CSS ends */
 
