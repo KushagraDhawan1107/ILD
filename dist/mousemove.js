@@ -211,7 +211,7 @@ if (!isMobile()) {
 
     /* x: lerp(0.1, convert_range(project_titles[0].getBoundingClientRect().x), convert_range(normal_mouse_pos_x)), */
 
-    var lerp = (amount, start, end) => {
-        return (1 - amount) * start + amount * end;
-    };
+    // var lerp = (amount, start, end) => {
+    //     return (1 - amount) * start + amount * end;
+    // };
 }
