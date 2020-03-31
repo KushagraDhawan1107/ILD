@@ -115,7 +115,7 @@ body {
 }
 
 /* Smooth page scroll style rules start here */
-.viewport {
+/* .viewport {
     overflow: hidden;
     position: fixed;
     height: 100%;
@@ -124,16 +124,16 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-}
+} */
 
 /* reduce height for lower res screens */
-.scroll-container {
+/* .scroll-container {
     position: relative;
     background-color: #ffffff;
     z-index: 10;
     backface-visibility: hidden;
     transform-style: preserve-3d;
-}
+} */
 
 /* Smooth page scroll style rules end here */
 
@@ -239,6 +239,8 @@ body {
 .about-us-stats-section {
     width: calc(100vw - var(--scrollbar-width));
     margin-left: -10vw;
+    /* background-color: aqua; */
+    /* height: 100vh; */
 }
 .about-us-stats-section--container {
     width: auto;
@@ -248,13 +250,17 @@ body {
     grid-auto-flow: column;
     column-gap: 8vw;
 }
+.about-us-stats-section-container--grid{
+    display: grid;
+    grid-template-columns: 35vw 35vw 35vw 35vw 35vw;
+}
 .stat-item-container-grid {
     display: grid;
     grid-template-rows: max-content 1fr;
 }
-.stats-item-container {
+/* .stats-item-container {
     width: 35vw;
-}
+} */
 .stats-image-container {
     display: grid;
     margin-top: -12vh;
