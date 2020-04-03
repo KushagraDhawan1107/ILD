@@ -96,99 +96,95 @@ var animating_background, animating_first_text, animating_second_text;
 var first_para, second_para;
 var button_animation_duration = 0.75;
 
-button_first_text.forEach((e) => {
-	first_para = e.innerHTML.split("");
-	e.innerHTML = "";
-	first_para.forEach((f) => {
-		e.innerHTML = e.innerHTML + "<span>" + f + "</span>";
-	});
+button_first_text.forEach(e => {
+    first_para = e.innerHTML.split("");
+    e.innerHTML = "";
+    first_para.forEach(f => {
+        e.innerHTML = e.innerHTML + "<span>" + f + "</span>";
+    });
 });
-button_second_text.forEach((e) => {
-	second_para = e.innerHTML.split("");
-	e.innerHTML = "";
-	second_para.forEach((f) => {
-		e.innerHTML = e.innerHTML + "<span>" + f + "</span>";
-	});
+button_second_text.forEach(e => {
+    second_para = e.innerHTML.split("");
+    e.innerHTML = "";
+    second_para.forEach(f => {
+        e.innerHTML = e.innerHTML + "<span>" + f + "</span>";
+    });
 });
 
 function button_animation_play(target) {
-	button_animation_timeline = new gsap.timeline({ paused: true, defaults: { ease: "power2.inOut" } });
-	button_animation_timeline.timeScale(1.2);
-	button_animation_timeline
-		.to(
-			target.querySelector(".button-background"),
-			button_animation_duration,
-			{
-				height: "100px",
-			},
-			button_animation_duration / 3
-		)
-		.to(
-			target.querySelectorAll(".button-first-text span"),
-			button_animation_duration,
-			{
-				y: "-1rem",
-				stagger: 0.01,
-			},
-			0
-		)
-		.to(
-			target.querySelectorAll(".button-second-text span"),
-			button_animation_duration,
-			{
-				y: "0rem",
-				stagger: 0.01,
-			},
-			button_animation_duration / 3
-		);
-	button_animation_timeline.play();
+    button_animation_timeline = new gsap.timeline({ paused: true, defaults: { ease: "power2.inOut" } });
+    button_animation_timeline.timeScale(1.2);
+    button_animation_timeline
+        .to(
+            target.querySelector(".button-background"),
+            button_animation_duration,
+            {
+                height: "100px"
+            },
+            button_animation_duration / 3
+        )
+        .to(
+            target.querySelectorAll(".button-first-text span"),
+            button_animation_duration,
+            {
+                y: "-1rem",
+                stagger: 0.01
+            },
+            0
+        )
+        .to(
+            target.querySelectorAll(".button-second-text span"),
+            button_animation_duration,
+            {
+                y: "0rem",
+                stagger: 0.01
+            },
+            button_animation_duration / 3
+        );
+    button_animation_timeline.play();
 }
 
 function button_animation_reverse() {
-	button_animation_timeline.reverse();
+    button_animation_timeline.reverse();
 }
 
-temp_button.forEach((e) => {
-	e.addEventListener("mouseenter", () => {
-		button_animation_play(e);
-	});
+temp_button.forEach(e => {
+    e.addEventListener("mouseenter", () => {
+        button_animation_play(e);
+    });
 
-	e.addEventListener("mouseleave", () => {
-		button_animation_reverse();
-	});
+    e.addEventListener("mouseleave", () => {
+        button_animation_reverse();
+    });
 });
-
-
 
 //Make a ScrollMagic scene
 var controller = new ScrollMagic.Controller();
 var height = window.innerHeight;
 var offsetValue = -height / 2;
-var horscrgallery = document.querySelectorAll(".about-us-stats-section")
+var horscrgallery = document.querySelectorAll(".about-us-stats-section");
 
-horscrgallery.forEach( function(e) {
+horscrgallery.forEach(function(e) {
+    //References to DOM elements
+    var imageOverlay = e.querySelector(".about-us-stats-section-container--grid");
+    var containerwidth = imageOverlay.offsetWidth + "px";
+    console.log(containerwidth);
 
-  //References to DOM elements
-  var imageOverlay = e.querySelector(".about-us-stats-section-container--grid");
-  var containerwidth = imageOverlay.offsetWidth + "px";
-  console.log(containerwidth);
-  
+    var animateImage = new gsap.timeline();
 
-  var animateImage =  new gsap.timeline();
+    animateImage
+        .to(imageOverlay, 6, { x: "-20%" })
+        .to(imageOverlay, 6, { x: "-40%" })
+        .to(imageOverlay, 6, { x: "-60%" })
+        .to(imageOverlay, 6, { x: "-80%" });
 
-  animateImage.to(imageOverlay, 6,   {x: "-20%" })
-  .to(imageOverlay, 6,   {x: "-40%" })
-  .to(imageOverlay, 6,   {x: "-60%" })
-  .to(imageOverlay, 6,   {x: "-80%" });
-
-  //Make a ScrollMagic scene
-  var scene = new ScrollMagic.Scene({
-    triggerElement: e,
-	triggerHook: 0,
-    duration: "400%",
-  })
-  .setTween(animateImage)
-  .setPin(e)
-	.addIndicators()
-    .addTo(controller);
+    //Make a ScrollMagic scene
+    var scene = new ScrollMagic.Scene({
+        triggerElement: e,
+        triggerHook: 0,
+        duration: "400%"
+    })
+        .setTween(animateImage)
+        .setPin(e)
+        .addTo(controller);
 });
